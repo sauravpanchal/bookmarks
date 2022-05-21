@@ -2,7 +2,7 @@
 
 # by default flask assumes app is running in development server. Hence we will change it to development to debug it.
 # cmd `set FLASK_ENV=development`
-# cmd `set FLASK_APP=app`
+# cmd `set FLASK_APP=app` or for this file to run 
 
 from flask import Flask
 import os
