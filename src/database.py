@@ -32,3 +32,6 @@ class Bookmarks(db.Model):
     created_at = db.Column(db.DateTime, default = datetime.now())
     updated_at = db.Column(db.DateTime, onupdate = datetime.now())
 
+    def __repr__(self) -> str:
+        return "Bookmark >> {self.url}"
+
