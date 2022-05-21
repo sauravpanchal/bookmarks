@@ -6,7 +6,7 @@ from datetime import datetime
 import string
 import random
 
-db = SQLAlchemy
+db = SQLAlchemy()
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key = True)
@@ -41,7 +41,7 @@ class Bookmarks(db.Model):
         link = self.query.filter_by(short_url = picked_chars).first()
 
         # checks if short_url's combination exist in database or not.
-        # if it exists then generate again else return picked_chars
+        # if it exists then generate again (because we need unique short_url) else return picked_chars
         if link:
             self.generate_short_url()
         else:
