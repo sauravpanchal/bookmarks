@@ -4,7 +4,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 import validators
 from flask_jwt_extended import create_access_token, create_refresh_token
 
-from src.consts.status_codes import HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_401_UNAUTHORIZED, HTTP_409_CONFLICT
+from src.consts.status_codes import HTTP_200_OK, HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_401_UNAUTHORIZED, HTTP_409_CONFLICT
 from src.database import User, db
 
 auth = Blueprint("auth", 
@@ -69,7 +69,7 @@ def login():
                                         "username": user.username,
                                         "email": user.email,
                                     }
-                          })
+                          }), HTTP_200_OK
     return jsonify({"error": "Incorrect credentials"}), HTTP_401_UNAUTHORIZED
 
 @auth.get("/me")
