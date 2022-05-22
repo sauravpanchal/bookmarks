@@ -16,7 +16,7 @@ class User(db.Model):
     created_at = db.Column(db.DateTime, default = datetime.now())
     updated_at = db.Column(db.DateTime, onupdate = datetime.now())
     
-    bookmarks = db.relationship("Bookmark", backref = "user")
+    bookmarks = db.relationship("Bookmarks", backref = "user")
 
 
     def __repr__(self) -> str:
