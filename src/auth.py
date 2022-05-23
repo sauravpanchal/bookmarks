@@ -2,7 +2,7 @@ import json
 from flask import Blueprint, request, jsonify
 from werkzeug.security import check_password_hash, generate_password_hash
 import validators
-from flask_jwt_extended import create_access_token, create_refresh_token
+from flask_jwt_extended import jwt_required, create_access_token, create_refresh_token, get_jwt_identity
 
 from src.consts.status_codes import HTTP_200_OK, HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_401_UNAUTHORIZED, HTTP_409_CONFLICT
 from src.database import User, db
@@ -73,5 +73,15 @@ def login():
     return jsonify({"error": "Incorrect credentials"}), HTTP_401_UNAUTHORIZED
 
 @auth.get("/me")
+@jwt_required() # it requires authorization token header or else will throw missing authorization header
 def me():
-    return {"user": "me"}
+    # import pdb
+    # pdb.set_trace()   => get_jwt_identity() gives what identity was encoded for the user 
+    user_id = get_jwt_identity()
+    user = User.query.filter_by(id = user_id).first()
+
+    return jsonify({
+                    "username": user.username,
+                    "email": user.email
+                  }), HTTP_200_OK
+    # return {"user": "me"}
