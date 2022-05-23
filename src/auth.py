@@ -1,5 +1,5 @@
-import json
 from flask import Blueprint, request, jsonify
+from sqlalchemy import Identity
 from werkzeug.security import check_password_hash, generate_password_hash
 import validators
 from flask_jwt_extended import jwt_required, create_access_token, create_refresh_token, get_jwt_identity
@@ -84,4 +84,13 @@ def me():
                     "username": user.username,
                     "email": user.email
                   }), HTTP_200_OK
-    # return {"user": "me"}
+
+@auth.get("/token/refresh")
+@jwt_required(refresh = True)
+def refresh_users_token():
+    identity = get_jwt_identity()
+    access = create_access_token(identity = identity)
+
+    return jsonify({
+                    "access": access
+                  }), HTTP_200_OK
