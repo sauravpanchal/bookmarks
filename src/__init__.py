@@ -51,6 +51,7 @@ def create_app(test_config = None):
     def handle_404(e):
         return jsonify({"error": "Not found !"}), HTTP_404_NOT_FOUND
     
+    # to check server side error handling change flask environment to production
     @app.errorhandler(HTTP_500_INTERNAL_SERVER_ERROR)
     def handle_500(e):
         return jsonify({"error": "It's not you, It's us ... & we are working on this issue !"}), HTTP_500_INTERNAL_SERVER_ERROR

@@ -16,8 +16,9 @@ bookmarks = Blueprint("bookmarks",
 #     return {"bookmarks": []}
 
 @bookmarks.route("/", methods = ["POST", "GET"]) #route & endpoints are same
-@jwt_required()
+@jwt_required() # comment this line while testing server side errorhandler's behaviour
 def get_or_post_bookmarks():
+    # print(some_variable) # create server side error like name error then change flask environvent to production then you can see 500 or other server side error handling by our error handler
     user = get_jwt_identity()
     if request.method == "POST":
         body = request.get_json().get("body", "")
