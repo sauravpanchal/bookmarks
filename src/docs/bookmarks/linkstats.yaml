@@ -1,0 +1,14 @@
+Get linkstats about bookmars
+---
+tags:
+  - Bookmarks
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+responses:
+  200:
+    description: Bookmark linkstats
+
+  401:
+    description: Failed to fetch the items because of authentication error
