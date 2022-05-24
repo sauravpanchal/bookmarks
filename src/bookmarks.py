@@ -47,7 +47,10 @@ def get_or_post_bookmarks():
                         "updated_at": bookmarks.updated_at,
                       }), HTTP_201_CREATED
     else:
-        bookmarks_list = Bookmarks.query.filter_by(user_id = user)
+        page = request.args.get("page", 1, type = int) # by default it'll send user to first page if there's no page specified in URL
+        per_page = request.args.get("per_page", 5, type = int)
+
+        bookmarks_list = Bookmarks.query.filter_by(user_id = user).paginate(page = page, per_page = per_page)
 
         data = list()
 
@@ -62,6 +65,16 @@ def get_or_post_bookmarks():
                         "updated_at": bookmarks.updated_at,
                        })
         
-        return jsonify({"data": data}), HTTP_200_OK
+        current = {
+                    "page": bookmarks.page,
+                    "pages": bookmarks.pages,
+                    "total_count": bookmarks.total,
+                    "prev_page": bookmarks.prev_num,
+                    "next_page": bookmarks.next_num,
+                    "has_prev": bookmarks.has_prev,
+                    "has_next": bookmarks.has_next,
+                  }
+
+        return jsonify({"data": data, "meta": current}), HTTP_200_OK
         
                           
