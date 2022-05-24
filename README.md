@@ -160,7 +160,7 @@ Project Link : [https://github.com/sauravpanchal/bookmarks](https://github.com/s
 * [JWT Extended Documentation](https://flask-jwt-extended.readthedocs.io/en/stable/)
 * [SQLAlchemy](https://www.sqlalchemy.org/library.html#reference)
 * [Postman](https://learning.postman.com/docs/getting-started/introduction/)
-* [Swagger](https://swagger.io/docs/)
+* [Flasgger (Swagger)](https://github.com/flasgger/flasgger)
 * [Heroku](https://devcenter.heroku.com/categories/reference)
 * [Stackoverflow Forum](https://stackoverflow.com/)
 
