@@ -147,3 +147,11 @@ def delete_bookmark(id):
     db.session.commit()
 
     return jsonify({}), HTTP_204_NO_CONTENT
+
+@bookmarks.get("/linkstats")
+@jwt_required()
+def get_linkstats():
+    user = get_jwt_identity()
+    data = list()
+
+    bookmark = Bookmarks.query.filter_by(user_id = user).all()
