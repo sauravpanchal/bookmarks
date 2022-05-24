@@ -4,10 +4,11 @@
 # cmd `set FLASK_ENV=development`
 # cmd `set FLASK_APP=app` or for this file to run 
 
-from flask import Flask, redirect
+from flask import Flask, redirect, jsonify
 import os
 from src.auth import auth
 from src.bookmarks import bookmarks
+from src.consts.status_codes import HTTP_404_NOT_FOUND, HTTP_500_INTERNAL_SERVER_ERROR
 from src.database import db, Bookmarks
 from flask_jwt_extended import JWTManager
 
@@ -44,5 +45,14 @@ def create_app(test_config = None):
             bookmark.visits += 1
             db.session.commit()
 
-            return redirect(bookmark.url)
+            return redirect(bookmark.url) 
+
+    @app.errorhandler(HTTP_404_NOT_FOUND)
+    def handle_404(e):
+        return jsonify({"error": "Not found !"}), HTTP_404_NOT_FOUND
+    
+    @app.errorhandler(HTTP_500_INTERNAL_SERVER_ERROR)
+    def handle_500(e):
+        return jsonify({"error": "It's not you, It's us ... & we are working on this issue !"}), HTTP_500_INTERNAL_SERVER_ERROR
+
     return app
