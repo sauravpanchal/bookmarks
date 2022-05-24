@@ -52,9 +52,9 @@ def get_or_post_bookmarks():
 
         bookmarks_list = Bookmarks.query.filter_by(user_id = user).paginate(page = page, per_page = per_page)
 
-        data = list()
+        data = []
 
-        for bookmarks in bookmarks_list:
+        for bookmarks in bookmarks_list.items:
             data.append({
                         "id": bookmarks.id,
                         "url": bookmarks.url,
@@ -66,14 +66,14 @@ def get_or_post_bookmarks():
                        })
         
         current = {
-                    "page": bookmarks.page,
-                    "pages": bookmarks.pages,
-                    "total_count": bookmarks.total,
-                    "prev_page": bookmarks.prev_num,
-                    "next_page": bookmarks.next_num,
-                    "has_prev": bookmarks.has_prev,
-                    "has_next": bookmarks.has_next,
-                  }
+                    "page": bookmarks_list.page,
+                    "pages": bookmarks_list.pages,
+                    "total_count": bookmarks_list.total,
+                    "prev_page": bookmarks_list.prev_num,
+                    "next_page": bookmarks_list.next_num,
+                    "has_prev": bookmarks_list.has_prev,
+                    "has_next": bookmarks_list.has_next,
+                }
 
         return jsonify({"data": data, "meta": current}), HTTP_200_OK
         
