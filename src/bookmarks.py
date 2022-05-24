@@ -154,4 +154,14 @@ def get_linkstats():
     user = get_jwt_identity()
     data = list()
 
-    bookmark = Bookmarks.query.filter_by(user_id = user).all()
+    bookmark_list = Bookmarks.query.filter_by(user_id = user).all()
+
+    for bookmark in bookmark_list:
+        data.append({
+                    "visits": bookmark.visits,
+                    "url": bookmark.url,
+                    "id": bookmark.id,
+                    "short_url": bookmark.short_url,
+                   })
+    
+    return jsonify({"data": data}), HTTP_200_OK        
