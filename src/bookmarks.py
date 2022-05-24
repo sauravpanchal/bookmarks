@@ -151,8 +151,8 @@ def delete_bookmark(id):
     return jsonify({}), HTTP_204_NO_CONTENT
 
 @bookmarks.get("/linkstats")
-@swag_from("./docs/bookmarks/linkstats.yaml")
 @jwt_required()
+@swag_from("./docs/bookmarks/linkstats.yaml")
 def get_linkstats():
     user = get_jwt_identity()
     data = list()

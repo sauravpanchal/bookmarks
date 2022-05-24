@@ -21,6 +21,7 @@ parameters:
           type: "string"
           format: password
           example: "$%^@##&8"
+          
 responses:
   201:
     description: When a user successfully gets registered

@@ -1,4 +1,4 @@
-Get linkstats about bookmars
+Get linkstats about bookmarks
 ---
 tags:
   - Bookmarks
@@ -6,6 +6,7 @@ parameters:
   - in: header
     name: Authorization
     required: true
+
 responses:
   200:
     description: Bookmark linkstats
