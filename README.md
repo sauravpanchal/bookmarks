@@ -80,7 +80,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 * Flask framework
-* Flask's Blueprint
 * Status codes (Information/Success/Redirect/Client/Server)
 * Configuring model and database
 * ORM with SQLAlchemy
