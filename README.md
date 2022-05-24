@@ -156,7 +156,8 @@ Project Link : [https://github.com/sauravpanchal/bookmarks](https://github.com/s
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [FLask Documentation](https://flask.palletsprojects.com/en/2.1.x/)
+* [Flask Documentation](https://flask.palletsprojects.com/en/2.1.x/)
+* [JWT Extended Documentation](https://flask-jwt-extended.readthedocs.io/en/stable/)
 * [Forum](https://stackoverflow.com/)
 
 [contributors-shield]: https://img.shields.io/github/contributors/sauravpanchal/bookmarks.svg?style=for-the-badge&color=brightgreen
