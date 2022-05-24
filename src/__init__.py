@@ -12,6 +12,9 @@ from src.consts.status_codes import HTTP_404_NOT_FOUND, HTTP_500_INTERNAL_SERVER
 from src.database import db, Bookmarks
 from flask_jwt_extended import JWTManager
 
+from flasgger import Swagger, swag_from
+from src.config.swagger import template, swagger_config
+
 def create_app(test_config = None):
     app = Flask(__name__, instance_relative_config = True)
 
@@ -21,6 +24,12 @@ def create_app(test_config = None):
             SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DB_URI"),
             SQLALCHEMY_TRACK_MODIFICATIONS = False,
             JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY"),
+
+            SWAGGER = {
+                        "title": "Bookmarks API",
+                        "UI Version": 3,
+
+                      }
         )
     else:
         app.config.from_mapping(test_config)
@@ -33,11 +42,14 @@ def create_app(test_config = None):
     app.register_blueprint(auth)
     app.register_blueprint(bookmarks)
 
+    Swagger(app, config = swagger_config, template = template)
+
     # generate `bookmarks.db` by cmd `db.create_all()`
     # to delete db use `bookmars.db`
 
     # param should be <placeholder> not explicit parameter
     @app.get("/<short_url>")
+    @swag_from("./docs/short_url.yaml") 
     def short_url_to_url(short_url):
         bookmark = Bookmarks.query.filter_by(short_url = short_url).first_or_404()
 
