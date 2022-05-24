@@ -6,10 +6,10 @@ template = {
         "contact": {
             "responsibleOrganization": "",
             "responsibleDeveloper": "",
-            "email": "deve@gmail.com",
-            "url": "www.twitter.com/deve",
+            "email": "demouser@gmail.com",
+            "url": "www.twitter.com/demouser",
         },
-        "termsOfService": "www.twitter.com/deve",
+        "termsOfService": "www.twitter.com/demouser",
         "version": "1.0"
     },
     "basePath": "/api/v1",  # base bash for blueprint registration
