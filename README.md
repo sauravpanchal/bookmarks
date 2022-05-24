@@ -158,7 +158,11 @@ Project Link : [https://github.com/sauravpanchal/bookmarks](https://github.com/s
 ## Acknowledgements
 * [Flask Documentation](https://flask.palletsprojects.com/en/2.1.x/)
 * [JWT Extended Documentation](https://flask-jwt-extended.readthedocs.io/en/stable/)
-* [Forum](https://stackoverflow.com/)
+* [SQLAlchemy](https://www.sqlalchemy.org/library.html#reference)
+* [Postman](https://learning.postman.com/docs/getting-started/introduction/)
+* [Swagger](https://swagger.io/docs/)
+* [Heroku](https://devcenter.heroku.com/categories/reference)
+* [Stackoverflow Forum](https://stackoverflow.com/)
 
 [contributors-shield]: https://img.shields.io/github/contributors/sauravpanchal/bookmarks.svg?style=for-the-badge&color=brightgreen
 [contributors-url]: https://github.com/sauravpanchal/bookmarks/graphs/contributors
