@@ -4,11 +4,11 @@
 # cmd `set FLASK_ENV=development`
 # cmd `set FLASK_APP=app` or for this file to run 
 
-from flask import Flask
+from flask import Flask, redirect
 import os
 from src.auth import auth
 from src.bookmarks import bookmarks
-from src.database import db
+from src.database import db, Bookmarks
 from flask_jwt_extended import JWTManager
 
 def create_app(test_config = None):
@@ -35,4 +35,14 @@ def create_app(test_config = None):
     # generate `bookmarks.db` by cmd `db.create_all()`
     # to delete db use `bookmars.db`
 
+    # param should be <placeholder> not explicit parameter
+    @app.get("/<short_url>")
+    def short_url_to_url(short_url):
+        bookmark = Bookmarks.query.filter_by(short_url = short_url).first_or_404()
+
+        if bookmark:
+            bookmark.visits += 1
+            db.session.commit()
+
+            return redirect(bookmark.url)
     return app
