@@ -72,6 +72,7 @@ Bookmark REST API build using Flask framework.
 * [JWT - JSON Web Tokens](https://flask-jwt-extended.readthedocs.io/en/stable/)
 * [Postman](https://learning.postman.com/docs/getting-started/introduction/)
 * [Swagger](https://swagger.io/docs/)
+* [Heroku](https://devcenter.heroku.com/categories/reference)
 
 <!-- GETTING STARTED -->
 ## Getting Started
