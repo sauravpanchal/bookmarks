@@ -7,9 +7,9 @@ template = {
             "responsibleOrganization": "",
             "responsibleDeveloper": "Saurav Panchal",
             "email": "saurav.panchal.08@gmail.com",
-            "url": "www.twitter.com/sauravpanchhal",
+            "url": "https://twitter.com/sauravpanchhal",
         },
-        "termsOfService": "www.twitter.com/sauravpanchhal",
+        "termsOfService": "https://twitter.com/sauravpanchhal",
         "version": "1.0"
     },
     "basePath": "/api/v1",  # base bash for blueprint registration
