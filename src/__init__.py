@@ -49,8 +49,7 @@ def create_app(test_config = None):
 
     # param should be <placeholder> not explicit parameter
     @app.get("/<short_url>")
-    @swag_from(".\docs\short_url.yaml")
-    # @swag_from("./docs/short_url.yaml") 
+    @swag_from("./docs/short_url.yaml") 
     def short_url_to_url(short_url):
         bookmark = Bookmarks.query.filter_by(short_url = short_url).first_or_404()
 
