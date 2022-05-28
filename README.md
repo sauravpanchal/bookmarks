@@ -31,7 +31,7 @@ Bookmark REST API build using Flask framework.
     ·
     <a href="https://github.com/sauravpanchal/bookmarks/issues">Request Feature</a>
     <br>
-    <a href="https://drive.google.com/file/d/1eJrLKLZVTRR-fjv9sG0_y_-Va2hvzxyk/view?usp=sharing">Documentation (PDF)</a>
+    <a href="#">Documentation (PDF)</a>
   </p>
 </p>
 
