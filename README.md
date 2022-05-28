@@ -72,7 +72,7 @@ Bookmark REST API build using Flask framework.
 * [JWT - JSON Web Tokens](https://flask-jwt-extended.readthedocs.io/en/stable/)
 * [Postman](https://learning.postman.com/docs/getting-started/introduction/)
 * [Flasgger (SwaggerUI)](https://github.com/flasgger/flasgger)
-* [Heroku](https://devcenter.heroku.com/categories/reference)
+* [Pythonanywhere](https://help.pythonanywhere.com/pages/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -161,7 +161,7 @@ Project Link : [https://github.com/sauravpanchal/bookmarks](https://github.com/s
 * [SQLAlchemy](https://www.sqlalchemy.org/library.html#reference)
 * [Postman](https://learning.postman.com/docs/getting-started/introduction/)
 * [Flasgger (Swagger)](https://github.com/flasgger/flasgger)
-* [Heroku](https://devcenter.heroku.com/categories/reference)
+* [Pythonanywhere](https://help.pythonanywhere.com/pages/)
 * [Stackoverflow Forum](https://stackoverflow.com/)
 
 [contributors-shield]: https://img.shields.io/github/contributors/sauravpanchal/bookmarks.svg?style=for-the-badge&color=brightgreen
