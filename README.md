@@ -1,6 +1,8 @@
 # bookmarks
 Bookmark REST API build using Flask framework.
 
+NOTE : Due to hosting issues, there's internal server error (5xx)
+
 <br>
 
 [![Contributors][contributors-shield]][contributors-url]
