@@ -1,6 +1,8 @@
 # bookmarks
 Bookmark REST API build using Flask framework.
 
+Tip : You can clone this repo, run this REST API locally then, import the same through Postman
+
 NOTE : Due to hosting issues, there's internal server error (5xx)
 
 <br>
