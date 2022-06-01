@@ -1,6 +1,10 @@
 # bookmarks
 Bookmark REST API build using Flask framework.
 
+Tip : You can clone this repo, run this REST API locally then, import the same through Postman
+
+NOTE : Due to hosting issues, there's internal server error (5xx)
+
 <br>
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -31,7 +35,7 @@ Bookmark REST API build using Flask framework.
     ·
     <a href="https://github.com/sauravpanchal/bookmarks/issues">Request Feature</a>
     <br>
-    <a href="https://drive.google.com/file/d/1eJrLKLZVTRR-fjv9sG0_y_-Va2hvzxyk/view?usp=sharing">Documentation (PDF)</a>
+    <a href="#">Documentation (PDF)</a>
   </p>
 </p>
 
@@ -72,7 +76,7 @@ Bookmark REST API build using Flask framework.
 * [JWT - JSON Web Tokens](https://flask-jwt-extended.readthedocs.io/en/stable/)
 * [Postman](https://learning.postman.com/docs/getting-started/introduction/)
 * [Flasgger (SwaggerUI)](https://github.com/flasgger/flasgger)
-* [Heroku](https://devcenter.heroku.com/categories/reference)
+* [Pythonanywhere](https://help.pythonanywhere.com/pages/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -161,7 +165,7 @@ Project Link : [https://github.com/sauravpanchal/bookmarks](https://github.com/s
 * [SQLAlchemy](https://www.sqlalchemy.org/library.html#reference)
 * [Postman](https://learning.postman.com/docs/getting-started/introduction/)
 * [Flasgger (Swagger)](https://github.com/flasgger/flasgger)
-* [Heroku](https://devcenter.heroku.com/categories/reference)
+* [Pythonanywhere](https://help.pythonanywhere.com/pages/)
 * [Stackoverflow Forum](https://stackoverflow.com/)
 
 [contributors-shield]: https://img.shields.io/github/contributors/sauravpanchal/bookmarks.svg?style=for-the-badge&color=brightgreen
