@@ -26,7 +26,7 @@ NOTE : Due to hosting issues, there's internal server error (5xx)
   <p align="center">
     A REST API that let's you manage URLs easily with user link tracking feature.
     <br />
-    <a href="https://github.com/sauravpanchal/bookmarks"><strong>Explore the docs »</strong></a>
+    <a href="https://documenter.getpostman.com/view/10650840/Uz5GmvMd"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="bit.ly/bookmarks-api">View Demo</a>
