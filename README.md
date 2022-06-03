@@ -29,13 +29,13 @@ NOTE : Due to hosting issues, there's internal server error (5xx)
     <a href="https://github.com/sauravpanchal/bookmarks"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/sauravpanchal/bookmarks">View Demo</a>
+    <a href="bit.ly/bookmarks-api">View Demo</a>
     ·
     <a href="https://github.com/sauravpanchal/bookmarks/issues">Report Bug</a>
     ·
     <a href="https://github.com/sauravpanchal/bookmarks/issues">Request Feature</a>
     <br>
-    <a href="#">Documentation (PDF)</a>
+    <a href="https://documenter.getpostman.com/view/10650840/Uz5GmvMd">Documentation</a>
   </p>
 </p>
 
